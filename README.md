@@ -1,0 +1,1 @@
+# git-catalog-test
