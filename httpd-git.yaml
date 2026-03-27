@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-git
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd-git
+  template:
+    metadata:
+      labels:
+        app: httpd-git
+    spec:
+      containers:
+      - name: httpd-git
+        image: anuddeeph/apache-webserver-php
+        volumeMounts:
+        - name: my-volume1
+          mountPath: /data1
