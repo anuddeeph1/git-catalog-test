@@ -18,3 +18,7 @@ spec:
         volumeMounts:
         - name: my-volume1
           mountPath: /data1
+      volumes:
+      - name: my-volume1
+        persistentVolumeClaim:
+          claimName: pvc1
